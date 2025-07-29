@@ -1,4 +1,4 @@
-v {xschem version=3.4.8RC file_version=1.2}
+v {xschem version=3.4.6 file_version=1.2}
 G {}
 K {}
 V {}
@@ -18,23 +18,30 @@ N 420 -360 440 -360 {lab=#net5}
 N 420 -340 440 -340 {lab=#net6}
 N 740 -340 810 -340 {lab=VOUT2}
 N 740 -360 810 -360 {lab=VOUT1}
-N -220 -320 -200 -320 {lab=#net7}
-N -220 -300 -200 -300 {lab=#net8}
-N 100 -300 120 -300 {lab=#net9}
-N 100 -320 120 -320 {lab=#net10}
-N 420 -320 440 -320 {lab=#net11}
-N 420 -300 440 -300 {lab=#net12}
-N -560 -320 -540 -320 {lab=#net13}
-N -560 -300 -540 -300 {lab=#net14}
+N -220 -320 -200 -320 {lab=VDD}
+N 100 -320 120 -320 {lab=VDD}
+N 420 -320 440 -320 {lab=VDD}
+N -560 -320 -540 -320 {lab=VDD}
+N 420 -320 420 -210 {lab=VDD}
+N -560 -210 420 -210 {lab=VDD}
+N -560 -320 -560 -210 {lab=VDD}
+N 440 -300 440 -240 {lab=#net7}
+N -540 -240 440 -240 {lab=#net7}
+N -540 -300 -540 -240 {lab=#net7}
+N -620 -240 -540 -240 {lab=#net7}
+N 120 -300 120 -240 {lab=#net7}
+N 100 -320 100 -210 {lab=VDD}
+N -200 -300 -200 -240 {lab=#net7}
+N -220 -320 -220 -210 {lab=VDD}
 C {vsource.sym} -650 -360 1 0 {name=V1 value="PULSE(0 1.8 0n 100p 100p 5n 10n)" savecurrent=false}
 C {gnd.sym} -710 -360 1 0 {name=l2 lab=GND}
 C {code_shown.sym} -750 -720 0 0 {name=s1 only_toplevel=false 
 value="
-.include /home/alexa/open_pdks/sky130/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.include $PDK_ROOT/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
 .control
 tran 10p 30n
-write /home/alexa/chip_design/xschem/simulations/VernierDelay.raw
+write VernierDelay.raw
 plot v(VOUT1) v(VOUT2)
 .endc
 
@@ -55,7 +62,10 @@ C {ngspice_probe.sym} 780 -360 0 0 {name=r6}
 C {lab_pin.sym} 780 -340 3 0 {name=p2 sig_type=std_logic lab=VOUT2}
 C {ngspice_probe.sym} 780 -340 1 0 {name=r1}
 C {gnd.sym} -710 -340 1 0 {name=l1 lab=GND}
-C {projects/Vernier_Delay_Symbol.sym} -390 -330 0 0 {name=x1}
-C {projects/Vernier_Delay_Symbol.sym} -50 -330 0 0 {name=x2}
-C {projects/Vernier_Delay_Symbol.sym} 270 -330 0 0 {name=x3}
-C {projects/Vernier_Delay_Symbol.sym} 590 -330 0 0 {name=x4}
+C {Vernier_Delay_Symbol.sym} -390 -330 0 0 {name=x1}
+C {Vernier_Delay_Symbol.sym} -50 -330 0 0 {name=x2}
+C {Vernier_Delay_Symbol.sym} 270 -330 0 0 {name=x3}
+C {Vernier_Delay_Symbol.sym} 590 -330 0 0 {name=x4}
+C {lab_pin.sym} 420 -210 0 1 {name=p4 sig_type=std_logic lab=VDD
+}
+C {gnd.sym} -620 -240 0 0 {name=l4 lab=GND}
