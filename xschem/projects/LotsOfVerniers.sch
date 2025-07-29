@@ -55,7 +55,7 @@ C {ngspice_probe.sym} 780 -360 0 0 {name=r6}
 C {lab_pin.sym} 780 -340 3 0 {name=p2 sig_type=std_logic lab=VOUT2}
 C {ngspice_probe.sym} 780 -340 1 0 {name=r1}
 C {gnd.sym} -710 -340 1 0 {name=l1 lab=GND}
-C {/home/alexa/chip_design/xschem/projects/Vernier_Delay_Symbol.sym} -390 -330 0 0 {name=x1}
-C {/home/alexa/chip_design/xschem/projects/Vernier_Delay_Symbol.sym} -50 -330 0 0 {name=x2}
-C {/home/alexa/chip_design/xschem/projects/Vernier_Delay_Symbol.sym} 270 -330 0 0 {name=x3}
-C {/home/alexa/chip_design/xschem/projects/Vernier_Delay_Symbol.sym} 590 -330 0 0 {name=x4}
+C {projects/Vernier_Delay_Symbol.sym} -390 -330 0 0 {name=x1}
+C {projects/Vernier_Delay_Symbol.sym} -50 -330 0 0 {name=x2}
+C {projects/Vernier_Delay_Symbol.sym} 270 -330 0 0 {name=x3}
+C {projects/Vernier_Delay_Symbol.sym} 590 -330 0 0 {name=x4}
