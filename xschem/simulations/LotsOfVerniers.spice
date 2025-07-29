@@ -1,0 +1,55 @@
+** sch_path: /home/tim/gits/TemporalConversionChip/xschem/projects/LotsOfVerniers.sch
+**.subckt LotsOfVerniers
+V1 VIN1 GND PULSE(0 1.8 0n 100p 100p 5n 10n)
+V2 VIN2 GND PULSE(0 1.8 0n 100p 100p 5n 10n)
+V3 VDD GND 1.8
+x1 net2 VIN1 net1 VIN2 VDD GND Vernier_Delay_Symbol
+x2 net3 net2 net4 net1 VDD GND Vernier_Delay_Symbol
+x3 net5 net3 net6 net4 VDD GND Vernier_Delay_Symbol
+x4 VOUT1 net5 VOUT2 net6 VDD GND Vernier_Delay_Symbol
+**** begin user architecture code
+
+
+.include $PDK_ROOT/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+.control
+tran 10p 30n
+write VernierDelay.raw
+plot v(VOUT1) v(VOUT2)
+.endc
+
+.options acct list
+.option numdgt=6
+
+
+.lib /usr/share/pdk/sky130A/libs.tech/combined/sky130.lib.spice tt
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  Vernier_Delay_Symbol.sym # of pins=6
+** sym_path: /home/tim/gits/TemporalConversionChip/xschem/projects/Vernier_Delay_Symbol.sym
+** sch_path: /home/tim/gits/TemporalConversionChip/xschem/projects/Vernier_Delay_Symbol.sch
+.subckt Vernier_Delay_Symbol OUT1 IN1 OUT2 IN2 VDD GND
+*.ipin VDD
+*.ipin GND
+*.ipin IN1
+*.ipin IN2
+*.opin OUT1
+*.opin OUT2
+x2 net2 OUT2 0 0 VDD VDD OUT1 sky130_fd_sc_hd__dlxtp_1
+x13 net11 GND GND VDD VDD OUT2 sky130_fd_sc_hd__buf_1
+x10 net10 GND GND VDD VDD net11 sky130_fd_sc_hd__buf_1
+x11 net9 GND GND VDD VDD net10 sky130_fd_sc_hd__buf_1
+x12 IN2 GND GND VDD VDD net9 sky130_fd_sc_hd__buf_1
+x1 net8 GND GND VDD VDD net2 sky130_fd_sc_hd__buf_1
+x3 net7 GND GND VDD VDD net8 sky130_fd_sc_hd__buf_1
+x4 net6 GND GND VDD VDD net7 sky130_fd_sc_hd__buf_1
+x5 net5 GND GND VDD VDD net6 sky130_fd_sc_hd__buf_1
+x6 net4 GND GND VDD VDD net5 sky130_fd_sc_hd__buf_1
+x7 net3 GND GND VDD VDD net4 sky130_fd_sc_hd__buf_1
+x8 net1 GND GND VDD VDD net3 sky130_fd_sc_hd__buf_1
+x9 IN1 GND GND VDD VDD net1 sky130_fd_sc_hd__buf_1
+.ends
+
+.GLOBAL GND
+.end

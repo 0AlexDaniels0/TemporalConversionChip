@@ -23,7 +23,7 @@ N -490 290 -470 290 {lab=IN2}
 N 680 150 700 150 {lab=OUT1}
 N -30 290 500 280 {lab=OUT2}
 C {sky130_stdcells/dlxtp_1.sym} 590 160 0 0 {name=x2 VGND=0 VNB=0 VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} -70 290 0 0 {name=x13 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} -70 290 0 0 {name=x13 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
 C {ipin.sym} 290 520 0 0 {name=p2 lab=VDD}
 C {lab_pin.sym} 310 520 1 0 {name=p8 sig_type=std_logic lab=VDD}
 C {ipin.sym} 290 590 0 0 {name=p9 lab=GND}
@@ -32,14 +32,14 @@ C {ipin.sym} -490 150 0 0 {name=p1 lab=IN1}
 C {ipin.sym} -490 290 0 0 {name=p3 lab=IN2}
 C {opin.sym} 700 150 0 0 {name=p4 lab=OUT1}
 C {opin.sym} 500 280 0 0 {name=p5 lab=OUT2}
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} -190 290 0 0 {name=x10 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} -310 290 0 0 {name=x11 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} -430 290 0 0 {name=x12 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} 410 150 0 0 {name=x1 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} 290 150 0 0 {name=x3 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} 170 150 0 0 {name=x4 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} 50 150 0 0 {name=x5 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} -70 150 0 0 {name=x6 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} -190 150 0 0 {name=x7 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} -310 150 0 0 {name=x8 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
-C {/usr/local/share/pdk/sky130B/libs.tech/xschem/sky130_stdcells/buf_1.sym} -430 150 0 0 {name=x9 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} -190 290 0 0 {name=x10 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} -310 290 0 0 {name=x11 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} -430 290 0 0 {name=x12 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} 410 150 0 0 {name=x1 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} 290 150 0 0 {name=x3 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} 170 150 0 0 {name=x4 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} 50 150 0 0 {name=x5 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} -70 150 0 0 {name=x6 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} -190 150 0 0 {name=x7 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} -310 150 0 0 {name=x8 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
+C {sky130_stdcells/buf_1.sym} -430 150 0 0 {name=x9 VGND=GND VNB=GND VPB=VDD VPWR=VDD prefix=sky130_fd_sc_hd__ }
