@@ -15,7 +15,7 @@ export OPEN_PDKS_ROOT="$HOME/open_pdks/sky130"
 # Xschem
 # -------------------------------
 export XSCHEM_LIBRARY_PATH="$CHIP_ROOT/xschem/symbols:$CHIP_ROOT/xschem/projects"
-export XSCHEMRC="$CHIP_ROOT/xschem/xschemrc"
+export XSCHEMRC="$CHIP_ROOT/xschem/projects/xschemrc"
 
 # -------------------------------
 # Ngspice
