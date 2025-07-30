@@ -31,7 +31,7 @@ Before launching Xschem or other tools, run:
 source setup_env.sh
 ```
 
-🔁 **You must run this command in every new terminal session before working on the project.**
+🔁 **You should run this command from inside your TemporalConversionChip folder in every new terminal session before working on the project.**
 
 This script:
 
@@ -47,7 +47,7 @@ This script:
 To avoid running the script manually every time, add this to your `~/.bashrc` or `~/.zshrc`:
 
 ```bash
-if [ -f "$HOME/TemporalChip/setup_env.sh" ]; then
-  source "$HOME/TemporalChip/setup_env.sh"
+if [ -f "$HOME/TemporalConversionChip/setup_env.sh" ]; then
+  source "$HOME/TemporalConversionChip/setup_env.sh"
 fi
 ```
