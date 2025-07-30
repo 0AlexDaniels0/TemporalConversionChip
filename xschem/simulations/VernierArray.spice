@@ -26,7 +26,7 @@ plot v(VOUT1) v(VOUT2) v(TEST1) V(TEST2)
 .option numdgt=6
 
 
-.lib /usr/local/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+.lib /home/alexa/open_pdks/sky130/sky130B/libs.tech/combined/sky130.lib.spice tt
 **** end user architecture code
 **.ends
 
