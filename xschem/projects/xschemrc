@@ -12,7 +12,7 @@ if { ![info exists env(PDK_ROOT)] } {
 
 # Set default PDK
 if { ![info exists env(PDK)] } {
-  set ::env(PDK) sky130A
+  set ::env(PDK) sky130B
 }
 
 # Source the PDK xschemrc file
