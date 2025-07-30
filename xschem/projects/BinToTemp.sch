@@ -30,11 +30,11 @@ C {lab_pin.sym} 60 -80 1 0 {name=p1 sig_type=std_logic lab=VIN}
 C {lab_pin.sym} 330 -80 1 0 {name=p2 sig_type=std_logic lab=VOUT1}
 C {code_shown.sym} -170 -380 0 0 {name=s1 only_toplevel=false 
 value="
-.include /home/alexa/open_pdks/sky130/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+.include $PDK_ROOT/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
 .control
 tran 10p 50n
-write /home/alexa/chip_design/xschem/simulations/BinaryToTemporal.raw
+write BinToTemp.raw
 .save all
 plot v(VIN) v(VOUT1) v(VOUT2)
 .endc
