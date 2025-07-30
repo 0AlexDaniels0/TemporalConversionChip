@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Get absolute path to this script's directory
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 export CHIP_ROOT="$SCRIPT_DIR"
@@ -6,8 +8,8 @@ export CHIP_ROOT="$SCRIPT_DIR"
 # Common design variables
 # -------------------------------
 export PDK=sky130B
-export PDK_ROOT="$CHIP_ROOT/sky130"
-export OPEN_PDKS_ROOT="$CHIP_ROOT/sky130"
+export PDK_ROOT="$HOME/open_pdks/sky130"
+export OPEN_PDKS_ROOT="$HOME/open_pdks/sky130"
 
 # -------------------------------
 # Xschem
@@ -40,6 +42,7 @@ export IRSIM_RC="$CHIP_ROOT/irsim/irsimrc"
 # Final check
 # -------------------------------
 echo "✅ Environment setup complete!"
-echo "CHIP_ROOT = $CHIP_ROOT"
-echo "PDK       = $PDK"
-echo "PDK_ROOT  = $PDK_ROOT"
+echo "CHIP_ROOT  = $CHIP_ROOT"
+echo "PDK        = $PDK"
+echo "PDK_ROOT   = $PDK_ROOT"
+echo "XSCHEMRC   = $XSCHEMRC"
