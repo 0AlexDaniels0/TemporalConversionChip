@@ -1,0 +1,26 @@
+** sch_path: /home/alexa/TemporalChip/xschem/projects/FlipFlopTest.sch
+**.subckt FlipFlopTest
+V1 VIN1 GND PULSE(0 1.8 0n 100p 100p 3n 5n)
+V2 VOUT2 GND PULSE(0 1.8 0n 100p 100p 3n 5n)
+V3 VDD GND 1.8
+x2 TEST1 VOUT2 0 0 VDD VDD VOUT sky130_fd_sc_hd__dlxtp_1
+x13 VIN1 GND GND VDD VDD TEST1 sky130_fd_sc_hd__buf_1
+**** begin user architecture code
+
+
+.include $PDK_ROOT/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
+
+.control
+tran 10p 30n
+write FlipFlopTest.raw
+plot v(VIN1) v(TEST1) v(VOUT) v(VOUT2)
+.endc
+
+.options acct list
+
+
+.lib /usr/local/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+**** end user architecture code
+**.ends
+.GLOBAL GND
+.end
