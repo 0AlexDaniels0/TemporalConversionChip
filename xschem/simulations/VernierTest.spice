@@ -1,4 +1,4 @@
-** sch_path: /home/tim/gits/TemporalConversionChip/xschem/projects/VernierTest.sch
+** sch_path: /home/alexa/TemporalChip/xschem/projects/VernierTest.sch
 **.subckt VernierTest t0 t1 t2 t3 t4 t5 t6 t7
 *.opin t0
 *.opin t1
@@ -27,7 +27,7 @@ x9 t7 t6 net8 net6 VDD GND VernierSymbol
 
 .control
 tran 10p 300n
-write VernierDelay.raw
+write VernierTest.raw
 plot v(VIN1) v(VIN2)
 plot v(t0) v(t1)+2 v(t2)+4 v(t3)+6 v(t4)+8 v(t5)+10 v(t6)+12 v(t7)+14
 .endc
@@ -36,13 +36,13 @@ plot v(t0) v(t1)+2 v(t2)+4 v(t3)+6 v(t4)+8 v(t5)+10 v(t6)+12 v(t7)+14
 .option numdgt=6
 
 
-.lib /usr/share/pdk/sky130B/libs.tech/combined/sky130.lib.spice tt
+.lib /home/alexa/open_pdks/sky130/sky130B/libs.tech/combined/sky130.lib.spice tt
 **** end user architecture code
 **.ends
 
 * expanding   symbol:  VernierSymbol.sym # of pins=6
-** sym_path: /home/tim/gits/TemporalConversionChip/xschem/projects/VernierSymbol.sym
-** sch_path: /home/tim/gits/TemporalConversionChip/xschem/projects/VernierSymbol.sch
+** sym_path: /home/alexa/TemporalChip/xschem/projects/VernierSymbol.sym
+** sch_path: /home/alexa/TemporalChip/xschem/projects/VernierSymbol.sch
 .subckt VernierSymbol OUT1 IN1 OUT2 IN2 VDD GND
 *.ipin VDD
 *.ipin GND
