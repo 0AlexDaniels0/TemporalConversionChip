@@ -6,8 +6,8 @@ S {}
 E {}
 N -810 -340 -780 -340 {lab=GND}
 N -620 -360 -540 -360 {lab=VIN1}
-N -150 -580 -150 -550 {lab=VDD}
-N -150 -490 -150 -450 {lab=GND}
+N -20 -660 -20 -630 {lab=VDD}
+N -20 -570 -20 -530 {lab=GND}
 N -240 -340 -200 -340 {lab=#net1}
 N -240 -360 -200 -360 {lab=t0}
 N 100 -360 120 -360 {lab=t1}
@@ -66,7 +66,7 @@ N 120 -420 120 -360 {lab=t1}
 N -200 -420 -200 -360 {lab=t0}
 C {vsource.sym} -750 -340 1 0 {name=V1 value="PULSE(0 1.8 0n 100p 100p 5n 50n)" savecurrent=false}
 C {gnd.sym} -680 -380 2 0 {name=l2 lab=GND}
-C {code_shown.sym} -780 -880 0 0 {name=s1 only_toplevel=false 
+C {code_shown.sym} -840 -720 0 0 {name=s1 only_toplevel=false 
 value="
 .include $PDK_ROOT/sky130B/libs.ref/sky130_fd_sc_hd/spice/sky130_fd_sc_hd.spice
 
@@ -85,10 +85,10 @@ C {lab_pin.sym} -580 -340 3 0 {name=p5 sig_type=std_logic lab=VIN2}
 C {ngspice_probe.sym} -580 -360 0 0 {name=r3}
 C {ngspice_probe.sym} -580 -340 1 0 {name=r4}
 C {vsource.sym} -650 -360 1 0 {name=V2 value="PULSE(0 1.8 0n 100p 100p 5n 51n)" savecurrent=false}
-C {sky130_fd_pr/corner.sym} -370 -550 0 0 {name=CORNER only_toplevel=false corner=tt}
-C {vsource.sym} -150 -520 0 0 {name=V3 value=1.8 savecurrent=false}
-C {lab_pin.sym} -150 -570 2 0 {name=p1 sig_type=std_logic lab=VDD}
-C {gnd.sym} -150 -450 0 0 {name=l3 lab=GND}
+C {sky130_fd_pr/corner.sym} 40 -630 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {vsource.sym} -20 -600 0 0 {name=V3 value=1.8 savecurrent=false}
+C {lab_pin.sym} -20 -650 2 0 {name=p1 sig_type=std_logic lab=VDD}
+C {gnd.sym} -20 -530 0 0 {name=l3 lab=GND}
 C {gnd.sym} -810 -340 1 0 {name=l1 lab=GND}
 C {lab_pin.sym} -560 -210 2 1 {name=p4 sig_type=std_logic lab=VDD
 }
@@ -109,4 +109,3 @@ C {opin.sym} 1100 -420 0 0 {name=p9 lab=t4}
 C {opin.sym} 1420 -420 0 0 {name=p10 lab=t5}
 C {opin.sym} 1740 -420 0 0 {name=p11 lab=t6}
 C {opin.sym} 2060 -420 0 0 {name=p12 lab=t7}
-C {noconn.sym} 2110 -340 0 1 {name=l5}
