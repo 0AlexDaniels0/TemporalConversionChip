@@ -23,6 +23,9 @@ if {![info exists PDK]} {
 # Add current directory to xschem library path
 append XSCHEM_LIBRARY_PATH :[file dirname [info script]]
 
+# Add ReRAM model symbol path
+append XSCHEM_LIBRARY_PATH :$env(CHIP_ROOT)/extern/rram_model/xschem
+
 # Set simulation path to ../simulations
 set netlist_dir [file dirname [info script]]/../simulations
 

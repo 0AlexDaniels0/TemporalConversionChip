@@ -1,0 +1,3 @@
+[submodule "rram_model"]
+	path = rram_model
+	url = https://github.com/Samarthjainabout/rram_model.git

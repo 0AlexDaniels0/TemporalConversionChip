@@ -1,0 +1,33 @@
+* ReRAM Step Pulse Time Analysis
+
+* Circuit description
+V1 TE 0 PULSE(0 {VSTEP} 0 1n 1n {PW} {2*PW})
+XR0 TE 0 sky130_fd_pr_reram__reram_cell Tfilament_0=3.8e-9
+
+* Parameter declarations
+.param VSTEP=1.8
+.param PW=100n
+
+.tran 0.1n 2u
+
+.include /content/rram_model/ngspice/sky130_fd_pr_reram__reram_cell.spice
+
+.control
+set filetype=ascii
+
+* Define a list of pulse widths
+let pw_list = [10n 50n 100n 500n 1u]
+let i = 0
+
+* Loop over each pulse width
+while i < length(pw_list)
+    alterparam PW = pw_list[i]
+    reset
+    run
+    write pw_$&pw_list[i].raw
+    let i = i + 1
+end
+
+.endc
+
+.end
