@@ -64,7 +64,7 @@ value="
 
 .control
 tran 10p 100n
-write VernierDelay.raw
+write VernierArray.raw
 plot v(VOUT1) v(VOUT2) v(TEST1) V(TEST2)
 .endc
 
