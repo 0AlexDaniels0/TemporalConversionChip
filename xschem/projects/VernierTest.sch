@@ -1,4 +1,4 @@
-v {xschem version=3.4.6 file_version=1.2}
+v {xschem version=3.4.8RC file_version=1.2}
 G {}
 K {}
 V {}
@@ -72,7 +72,7 @@ value="
 
 .control
 tran 10p 300n
-write VernierDelay.raw
+write VernierTest.raw
 plot v(VIN1) v(VIN2)
 plot v(t0) v(t1)+2 v(t2)+4 v(t3)+6 v(t4)+8 v(t5)+10 v(t6)+12 v(t7)+14
 .endc
