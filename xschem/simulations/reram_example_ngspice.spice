@@ -1,0 +1,24 @@
+** sch_path: /home/alexa/TemporalChip/extern/rram_model/xschem/reram_examples/reram_example_ngspice.sch
+**.subckt reram_example_ngspice
+V1 TE 0 PWL (0 0 0.25u 1.8 0.5u 0 0.75u -1.8 1.0u 0.0)
+XR1 TE 0 sky130_fd_pr_reram__reram_cell Tfilament_0=3.3e-9
+**** begin user architecture code
+
+.tran 0.1n 1.5u
+
+
+** opencircuitdesign pdks install
+.include /home/alexa/open_pdks/sky130/sky130B/libs.tech/combined/skywater-pdk-libs-sky130_fd_pr_reram/cells/reram_cell/sky130_fd_pr_reram__reram_cell.spice
+
+
+.control
+save all
+run
+write reram_example_ngspice.raw
+.endc
+
+
+
+**** end user architecture code
+**.ends
+.end

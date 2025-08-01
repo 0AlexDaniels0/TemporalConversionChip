@@ -1,5 +1,4 @@
-v {xschem version=3.1.0 file_version=1.2
-}
+v {xschem version=3.4.8RC file_version=1.2}
 G {}
 K {}
 V {}
@@ -50,11 +49,6 @@ only_toplevel=false
 value=".tran 0.1n 1.5u"}
 C {devices/gnd.sym} 190 -180 0 0 {name=l2 lab=0}
 C {devices/lab_wire.sym} 300 -310 0 0 {name=l1 sig_type=std_logic lab=TE}
-C {sky130_fd_pr/reram_cell.sym} 410 -250 0 0 {name=R0
-model=reram_cell
-Tfilament_0=3.8e-9
-spiceprefix=X
-}
 C {devices/launcher.sym} 520 -420 0 0 {name=h1
 descr="Load I-V" 
 tclcommand="
@@ -67,7 +61,7 @@ only_toplevel=true
 format="tcleval( @value )"
 value="
 ** opencircuitdesign pdks install
-.inc $::SKYWATER_MODELS/sky130_fd_pr_reram__reram_cell.spice
+.include $PDK_ROOT/open_pdks/sky130/sky130B/libs.tech/combined/skywater-pdk-libs-sky130_fd_pr_reram/cells/reram_cell/sky130_fd_pr_reram__reram_cell.spice
 "
 spice_ignore=false}
 C {devices/code.sym} 320 -480 0 0 {name=NGSPICE
@@ -79,3 +73,8 @@ write reram_example_ngspice.raw
 .endc
 
 " }
+C {sky130_fd_pr/reram_cell.sym} 410 -250 0 0 {name=R1
+model=reram_cell
+Tfilament_0=3.3e-9
+spiceprefix=X
+}
