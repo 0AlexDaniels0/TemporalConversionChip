@@ -1,1 +1,35 @@
+#Ignore Simulations
 xschem/simulations/*.raw
+
+# Ignore OpenVAF binary and related build artifacts
+extern/rram_model/openvaf
+**/openvaf
+/target/
+**/target/
+**/build/
+*.o
+*.out
+*.a
+*.so
+*.dylib
+
+# Simulation outputs
+*.raw
+*.vcd
+*.log
+*.cir.out
+
+# Editor/IDE junk
+*.swp
+*~
+.vscode/
+.DS_Store
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Backup and temp files
+*.bak
+*.tmp
+*.old
